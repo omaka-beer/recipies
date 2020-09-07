@@ -1,0 +1,68 @@
+info {
+  name: 	"Mamma",
+  taste: 	{torr, besk, krispig}
+  desc: 	"Det sägs att pilsner är ölets moder och just denna är brygd för alla mammor. Den är torr, besk och krispig, precis som mamma vill ha den."
+  ABV(%):	4,8%
+	OG(p): 	10,9p
+	FG(p): 	11,4p
+	CO2(%):	4%
+	EBC:		8
+	IBU:		20
+}
+
+malt {
+  pilsner: 100%
+}
+
+hops (amount, time) {
+  herkules {
+    amount: 8 ga/hl // ga/hl = gram alpha acid per hektolitre
+    time: 	B       // B = boil
+  }
+  hallertau-blanc {
+    amount: 0,5 g/l
+    time: 	WP      // WP = whirlpool
+  }
+	nelson-sauvin {
+    amount: 0,5 g/l
+    time: 	WP
+  }
+  hallertau-blanc {
+    amount: 0,5 g/l
+    time: 	FT      // FT = fermentation tank
+  }
+	nelson-sauvin {
+    amount: 0,5 g/l
+    time: 	FT
+  }
+}
+
+hopsALT (amount, time) {
+	herkules				(8,0 ga/hl, B) // ga/hl = gram alpha acid per hektolitre, B = boil
+	hallertau-blanc (0,5 g/l, WP) // WP = whirlpool
+	nelson-sauvin 	(0,5 g/l, WP)
+	hallertau-blanc (0,5 g/l, FT) // FT = fermentation tank
+  nelson-sauvin 	(0,5 g/l, FT)
+}
+
+mash (temperature, time) {
+	mash-in (60c, 10 min)
+	REST (10 min)
+	heat (64c, 40 min)
+	REST (10 min)
+	heat (72c, 20 min)
+	REST (10 min)
+	heat (78c, 10 min)
+}
+
+whirlpool (15 min)
+
+boil (60 min)
+
+ferment (celsius) {
+	yeast =		 		"W34/70"
+	init-temp: 		8
+	ferment-temp: 10
+	ABV = 				info.ABV()
+}
+
