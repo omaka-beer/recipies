@@ -3,7 +3,7 @@ info {
   taste: 	{torr, besk, krispig}
   desc: 	"Det sägs att pilsner är ölets moder och just denna är brygd för alla mammor. Den är torr, besk och krispig, precis som mamma vill ha den."
   ABV(%):	4,8%
-	OG(p): 	10,9p
+  OG(p): 	10,9p
 	FG(p): 	11,4p
 	CO2(%):	4%
 	EBC:		8
